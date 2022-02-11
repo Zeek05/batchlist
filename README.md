@@ -51,72 +51,73 @@ The plugin returns some special exit codes in the case of some errors. They are 
 Let's run a batch file that initializes a list of 16 integers, removes the top six, removes the bottom six, and get's the length of the list, and prints the entire list.
 The program can easily be run inside of a for loop to **drastically reduce code size** but this is just for simplicity:
 	
-``@echo off``
-``color 0f``
-``title Demonstration Program``
-``if exist "demo" del "demo"``
-``list "demo" /nl``
-``list "demo" push "1"``
-``list "demo" push "2"``
-``list "demo" push "3"``
-``list "demo" push "4"``
-``list "demo" push "5"``
-``list "demo" push "6"``
-``list "demo" push "7"``
-``list "demo" push "8"``
-``list "demo" push "9"``
-``list "demo" push "10"``
-``list "demo" push "11"``
-``list "demo" push "12"``
-``list "demo" push "13"``
-``list "demo" push "14"``
-``list "demo" push "15"``
-``list "demo" push "16"``
-``list "demo" pop``
-``list "demo" pop``
-``list "demo" pop``
-``list "demo" pop``
-``list "demo" pop``
-``list "demo" pop``
-``list "demo" popback``
-``list "demo" popback``
-``list "demo" popback``
-``list "demo" popback``
-``list "demo" popback``
-``list "demo" popback``
-``echo.``
-``echo Length of list:``
-``list "demo" getlength``
-``echo.``
-``echo Contents of list:``
-``list "demo" print``
-``echo.``
-``pause``
-
-
+```
+@echo off
+color 0f
+title Demonstration Program
+if exist "demo" del "demo"
+list "demo" /nl
+list "demo" push "1"
+list "demo" push "2"
+list "demo" push "3"
+list "demo" push "4"
+list "demo" push "5"
+list "demo" push "6"
+list "demo" push "7"
+list "demo" push "8"
+list "demo" push "9"
+list "demo" push "10"
+list "demo" push "11"
+list "demo" push "12"
+list "demo" push "13"
+list "demo" push "14"
+list "demo" push "15"
+list "demo" push "16"
+list "demo" pop
+list "demo" pop
+list "demo" pop
+list "demo" pop
+list "demo" pop
+list "demo" pop
+list "demo" popback
+list "demo" popback
+list "demo" popback
+list "demo" popback
+list "demo" popback
+list "demo" popback
+echo.
+echo Length of list:
+list "demo" getlength
+echo.
+echo Contents of list:
+list "demo" print
+echo.
+pause
+```
+	
 Removing an item from the list returns it to _STDOUT_, so we should get the following:
 
+```
+16
+15
+14
+13
+12
+11
+1
+2
+3
+4
+5
+6
 
-``16``
-``15``
-``14``
-``13``
-``12``
-``11``
-``1``
-``2``
-``3``
-``4``
-``5``
-``6``
-`` ``
-``Length of list:``
-``4``
-`` ``
-``Contents of list:``
-``10``
-``9``
-``8``
-``7``
-``Press any key to continue . . .``
-`` ``
+Length of list:
+4
+
+Contents of list:
+10
+9
+8
+7
+Press any key to continue . . .
+```
