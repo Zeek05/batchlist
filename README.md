@@ -9,6 +9,8 @@ The first item is the list head.
 Simply download the source which includes a **precompiled list binary**. The plugin requires only one file which is the executable, around 15kb. 
 You will call this executable file to operate on the list. It is recommended not to **rename the executable**.
 
+The binary was compiled with an updated version of TinyCC. You can use GCC or any other standard C compiler. There are no POSIX functions used.
+
 ## Usage
 ### Syntax
 
