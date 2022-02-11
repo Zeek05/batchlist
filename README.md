@@ -26,6 +26,7 @@ The syntax of the plugin is `list <listfile> <command> <parameter> </v>`.
 
 Left, _batch-style flag_. Right, _alternative style_. <_n_> is the name/type of parameter.
 
+```
 /af | push <value> - push an item to the front of the list
 /rf | pop - pop an item from the front of the list and return it
 /ab | append <value> - append an item to the end of the list
@@ -39,15 +40,18 @@ Left, _batch-style flag_. Right, _alternative style_. <_n_> is the name/type of 
 /ll | getlength - get the length of the list in number of elements
 /il | sizeof <index> - get the length of a value in the list. returns both characters and bytes size in verbose mode
 /nl | new <filename> - new list, creates a new list with the specified name.
+```
 
 ### Exit Codes
 The plugin returns some special exit codes in the case of some errors. They are described below.
+```
 0 - OK (No error)
 1 - ARG_FAILURE (Missing argument, invalid filename)
 2 - EMPTY_LIST (Value wasn't found or the list was empty)
 3 - INDEX_OUT_OF_BOUNDS (Negative integer or beyond the length of the list)
 4 - FILE_ERROR (Couldn't create a file or had an issue opening it)
 5 - NO_COMMAND (Invalid or missing command)
+```
 
 ## Example Demonstration
 Let's run a batch file that initializes a list of 16 integers, removes the top six, removes the bottom six, and get's the length of the list, and prints the entire list.
