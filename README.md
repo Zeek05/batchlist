@@ -4,6 +4,8 @@ This plugin allows you to create, manipulate and manage lists in CMD for Windows
 The plugin is flexible, the data created by the list plugin can be used in any other plugin (as it is stored in a file). Each line in a file is an item in the list.
 The first item is the list head.
 
+This README is updated for v2 of the plugin, so some commands here may be missing in v1.
+
 ## Installation
 
 Simply download the source which includes a **precompiled list binary**. The plugin requires only one file which is the executable, around 15kb. 
@@ -40,6 +42,11 @@ Left, _batch-style flag_. Right, _alternative style_. <_n_> is the name/type of 
 /ll | getlength - get the length of the list in number of elements
 /il | sizeof <index> - get the length of a value in the list. returns both characters and bytes size in verbose mode
 /nl | new <filename> - new list, creates a new list with the specified name.
+/rs | reverse - reverse the list
+/ps | pushset <space separated items> <0/1> - push n items to the list, 0 for front 1 for back
+/rs | removeset <space separated items> - remove any number of items from the list, must exist
+/ss | sortstr <0/1> - sort the list by string length. 0 for ascending 1 for descending.
+/si | sort <0/1> - sort the list by number. 0 asc. 1 desc., must be integer values.
 ```
 
 ### Exit Codes
